@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b91967d6-42dd-4fc4-97b9-52b164115712" name="Changes" comment="Some corrections">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cydeo/runners/CukesRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cydeo/runners/CukesRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cydeo/step_definitions/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cydeo/step_definitions/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cydeo/step_definitions/LoginStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cydeo/step_definitions/LoginStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/LynxSprint2/runners/FailedTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/LynxSprint2/runners/FailedTestRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +92,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
@@ -170,7 +167,7 @@
       <workItem from="1689347243439" duration="5669000" />
       <workItem from="1689533308175" duration="3055000" />
       <workItem from="1689551383389" duration="1655000" />
-      <workItem from="1689557508883" duration="8414000" />
+      <workItem from="1689557508883" duration="9418000" />
     </task>
     <task id="LOCAL-00001" summary="Some corrections">
       <created>1689552914361</created>
@@ -186,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689601860769</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Some corrections">
+      <created>1689628140778</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689628140778</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
