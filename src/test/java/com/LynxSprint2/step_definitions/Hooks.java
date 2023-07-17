@@ -1,13 +1,13 @@
-package com.cydeo.step_definitions;
+package com.LynxSprint2.step_definitions;
 
 /*
 In this class we will be able to create "pre" and "post" condition
 for ALL the SCENARIOS and even STEPS.
  */
 
-import com.cydeo.utilities.BrowserUtils;
-import com.cydeo.utilities.ConfigurationReader;
-import com.cydeo.utilities.Driver;
+import com.LynxSprint2.utilities.BrowserUtils;
+import com.LynxSprint2.utilities.ConfigurationReader;
+import com.LynxSprint2.utilities.Driver;
 import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -19,7 +19,7 @@ public class Hooks {
     //import the @Before coming from io.cucumber.java
     @Before(order = 1)
     public void setupMethod(){
-        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
 
@@ -42,12 +42,12 @@ public class Hooks {
         Driver.closeDriver();
     }
 
-    @BeforeStep
+    //@BeforeStep
     public void setupStep(){
         System.out.println("-----> @BeforeSTEP : Running before each step!");
     }
 
-    @AfterStep
+    //@AfterStep
     public void teardownStep(){
         System.out.println("-----> @AfterSTEP : Running after each step!");
     }

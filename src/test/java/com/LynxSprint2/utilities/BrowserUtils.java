@@ -1,4 +1,4 @@
-package com.cydeo.utilities;
+package com.LynxSprint2.utilities;
 
 import org.junit.Assert;
 import org.openqa.selenium.*;

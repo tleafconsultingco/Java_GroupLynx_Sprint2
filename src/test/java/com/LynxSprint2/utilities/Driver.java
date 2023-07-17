@@ -1,4 +1,4 @@
-package com.cydeo.utilities;
+package com.LynxSprint2.utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

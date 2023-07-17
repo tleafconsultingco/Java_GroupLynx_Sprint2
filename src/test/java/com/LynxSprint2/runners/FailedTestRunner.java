@@ -1,4 +1,4 @@
-package com.cydeo.runners;
+package com.LynxSprint2.runners;
 
 
 import io.cucumber.junit.Cucumber;

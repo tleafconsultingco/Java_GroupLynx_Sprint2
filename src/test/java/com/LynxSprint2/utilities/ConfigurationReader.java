@@ -1,4 +1,4 @@
-package com.cydeo.utilities;
+package com.LynxSprint2.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
