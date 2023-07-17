@@ -6,8 +6,8 @@ Feature: User should be able to login
 
   @wip
   Scenario Outline: Verify login with different user types
-    When the user is logged in as "<userName>","<password>"
 
+    When the user is logged in as "<userName>","<password>"
     Examples:
       | userName                      | password |
       | hr1@cybertekschool.com        | UserUser |

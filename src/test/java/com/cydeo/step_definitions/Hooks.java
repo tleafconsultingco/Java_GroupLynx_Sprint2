@@ -19,9 +19,7 @@ public class Hooks {
     //import the @Before coming from io.cucumber.java
     @Before(order = 1)
     public void setupMethod(){
-
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
 
@@ -33,21 +31,15 @@ public class Hooks {
     /*
     . @After will be executed automatically after EVERY scenario in the project.
      */
+
     @After
     public void teardownMethod(Scenario scenario){
-
         if (scenario.isFailed()) {
-
             byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
-
         }
-
-
-
         BrowserUtils.sleep(2);
         Driver.closeDriver();
-
     }
 
     @BeforeStep
