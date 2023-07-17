@@ -1,10 +1,9 @@
-package com.cydeo.step_definitions;
+package com.LynxSprint2.step_definitions;
 
-import com.cydeo.pages.LoginPage;
-import com.cydeo.utilities.ConfigurationReader;
-import com.cydeo.utilities.Driver;
+import com.LynxSprint2.pages.LoginPage;
+import com.LynxSprint2.utilities.ConfigurationReader;
+import com.LynxSprint2.utilities.Driver;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class LoginStepDefs {
