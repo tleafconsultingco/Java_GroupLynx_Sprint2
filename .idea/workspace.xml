@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b91967d6-42dd-4fc4-97b9-52b164115712" name="Changes" comment="Some corrections">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/pollTab.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/login.feature" afterDir="false" />
-    </list>
+    <list default="true" id="f670a8d5-e30d-4fba-9a28-e1fdaceb8ee4" name="Changes" comment="Some corrections" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,12 +40,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="B29G26-263_PollTab_Doina" />
-                    <option name="lastUsedInstant" value="1689693802" />
+                    <option name="branchName" value="B29G26-254_ableToLogin_Antonio" />
+                    <option name="lastUsedInstant" value="1689706226" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1689552638" />
+                    <option name="lastUsedInstant" value="1689706159" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -200,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689628140778</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Some corrections">
+      <created>1689706590638</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689706590639</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +220,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Doina" />
+                        <option value="B29G26-254_ableToLogin_Antonio" />
                       </list>
                     </value>
                   </entry>

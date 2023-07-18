@@ -5,6 +5,8 @@ import com.LynxSprint2.utilities.ConfigurationReader;
 import com.LynxSprint2.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class LoginStepDefs {
 
@@ -19,3 +21,6 @@ public class LoginStepDefs {
         loginPage.login(userName,password);
     }
 }
+//WebElement password = driver.findElement(By.xpath("//input[@name='USER_PASSWORD']"));
+//if (password.getAttribute("type") == "password")
+//something
