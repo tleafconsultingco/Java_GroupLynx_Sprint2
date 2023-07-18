@@ -13,4 +13,3 @@ Feature: User should be able to login
       | hr1@cybertekschool.com        | UserUser |
       | helpdesk1@cybertekschool.com  | UserUser |
       | marketing1@cybertekschool.com | UserUser |
-
