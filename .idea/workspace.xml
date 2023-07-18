@@ -49,12 +49,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="B29G26-263_PollTab_Doina" />
-                    <option name="lastUsedInstant" value="1689693802" />
+                    <option name="branchName" value="B29G26-254_ableToLogin_Antonio" />
+                    <option name="lastUsedInstant" value="1689706226" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1689552638" />
+                    <option name="lastUsedInstant" value="1689706159" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -222,7 +222,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Doina" />
+                        <option value="B29G26-254_ableToLogin_Antonio" />
                       </list>
                     </value>
                   </entry>
