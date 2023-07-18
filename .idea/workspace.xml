@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b91967d6-42dd-4fc4-97b9-52b164115712" name="Changes" comment="Some corrections">
+    <list default="true" id="b91967d6-42dd-4fc4-97b9-52b164115712" name="Changes" comment="branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -67,7 +67,7 @@
     </option>
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="8a237792-1c0d-4686-a8fe-2bfc11bfbd9b" />
+        <option name="accountId" value="a6db81d9-baf0-4a37-b545-ca7c617c2d8a" />
         <option name="url" value="https://github.com/tleafconsultingco/Java_GroupLynx_Sprint2.git" />
       </UrlAndAccount>
     </option>
@@ -167,6 +167,7 @@
       <workItem from="1689533308175" duration="3055000" />
       <workItem from="1689551383389" duration="1655000" />
       <workItem from="1689557508883" duration="9418000" />
+      <workItem from="1689689766928" duration="2222000" />
     </task>
     <task id="LOCAL-00001" summary="Some corrections">
       <created>1689552914361</created>
@@ -189,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689628140778</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="branch">
+      <created>1689689984769</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689689984769</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +228,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Some corrections" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some corrections" />
+    <MESSAGE value="branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="branch" />
   </component>
 </project>
