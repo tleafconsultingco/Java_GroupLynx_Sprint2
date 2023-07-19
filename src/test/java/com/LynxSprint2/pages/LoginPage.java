@@ -1,5 +1,6 @@
 package com.LynxSprint2.pages;
 
+import com.LynxSprint2.utilities.ConfigurationReader;
 import com.LynxSprint2.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,24 +12,50 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    //--LOCATORS--
     @FindBy(xpath = "//input[@type='password']")
     public WebElement attribute;
-
     @FindBy(xpath="//input[@name='USER_LOGIN']")
-    public WebElement userName;
-
+    public WebElement usernameField;
     @FindBy(xpath="//input[@name='USER_PASSWORD']")
-    public WebElement password;
-
+    public WebElement passwordField;
     @FindBy(xpath="//input[@value='Log In']")
-    public WebElement submit;
+    public WebElement logInButton;
 
+    //--METHODS--
 
-    public void login(String userNameStr, String passwordStr) {
-        userName.sendKeys(userNameStr);
-        password.sendKeys(passwordStr);
-        submit.click();
+    /*
+    Log in with valid credentials
+     */
+    public void login(String username, String password) {
+        usernameField.sendKeys(username);
+        passwordField.sendKeys(password);
+        logInButton.click();
         // verification that we logged
     }
+
+    /*
+    Log in as a specific userType
+     */
+    public void loginAsUserType(String userType){
+        String username = "",
+                password = "";
+
+        if (userType.equalsIgnoreCase("Hr")){
+            username = ConfigurationReader.getProperty("hr_username");
+            password = ConfigurationReader.getProperty("hr_password");
+        } else if (userType.equalsIgnoreCase("Helpdesk")) {
+            username = ConfigurationReader.getProperty("helpdesk_username");
+            password = ConfigurationReader.getProperty("helpdesk_password");
+        } else if (userType.equalsIgnoreCase("Marketing")){
+            username = ConfigurationReader.getProperty("marketing_username");
+            password = ConfigurationReader.getProperty("marketing_password");
+        }
+
+        usernameField.sendKeys(username);
+        passwordField.sendKeys(password);
+        logInButton.click();
+    }
+
 
 }
