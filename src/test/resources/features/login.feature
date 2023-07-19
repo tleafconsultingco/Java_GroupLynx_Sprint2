@@ -4,7 +4,6 @@ Feature: User should be able to login
   Background: User is already on the login page
     Given the user is on the login page
 
-  @wip
   Scenario Outline: Verify login with different user types
 
     When the user is logged in as "<userName>","<password>"
