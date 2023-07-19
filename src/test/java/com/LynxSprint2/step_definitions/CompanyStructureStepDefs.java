@@ -16,7 +16,7 @@ public class CompanyStructureStepDefs {
     LoginPage loginpage = new LoginPage();
 
 
-    @Given("user is logged in with valid username and password")
+    @When("user is logged in with valid username and password")
     public void userIsLoggedInWithValidAnd() {
         Driver.getDriver().get("https://qa.azulcrm.com/");
         loginpage.userName.sendKeys("hr1@cybertekschool.com");
@@ -25,7 +25,7 @@ public class CompanyStructureStepDefs {
         //loginpage.login("hr1@cybertekschool.com","UserUser");
     }
 
-    @When("{string} is on the landing page")
+    @And("{string} is on the landing page")
     public void isOnTheLandingPage(String userType) {
     }
 
@@ -40,7 +40,7 @@ public class CompanyStructureStepDefs {
         Assert.assertEquals(actualTitle,titleHeader);
     }
 
-    @Given("the hr user is logged in as {string}, {string}")
+    @When("the hr user is logged in as {string}, {string}")
     public void theHrUserIsLoggedInAs(String username, String password) {
         loginpage.login("hr1@cybertekschool.com","UserUser");
     }
