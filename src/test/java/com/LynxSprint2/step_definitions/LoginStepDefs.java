@@ -12,15 +12,12 @@ public class LoginStepDefs {
 
     LoginPage loginPage = new LoginPage();
 
-    @Given("the user is on the login page")
+   @Given("the user is on the login page")
     public void the_user_is_on_the_login_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
     @When("the user is logged in as {string},{string}")
     public void theUserIsLoggedInAs(String userName, String password) {
         loginPage.login(userName,password);
     }
 }
-//WebElement password = driver.findElement(By.xpath("//input[@name='USER_PASSWORD']"));
-//if (password.getAttribute("type") == "password")
-//something
+
