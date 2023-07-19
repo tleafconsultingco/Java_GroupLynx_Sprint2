@@ -9,6 +9,7 @@ import com.LynxSprint2.utilities.BrowserUtils;
 import com.LynxSprint2.utilities.ConfigurationReader;
 import com.LynxSprint2.utilities.Driver;
 import io.cucumber.java.*;
+import org.junit.Ignore;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -27,6 +28,7 @@ public class Hooks {
     public void login_scenario_before(){
         System.out.println("---> @Before: RUNNING BEFORE EACH SCENARIO");
     }
+
 
     /*
     . @After will be executed automatically after EVERY scenario in the project.
