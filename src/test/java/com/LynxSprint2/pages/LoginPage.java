@@ -22,7 +22,6 @@ public class LoginPage {
     @FindBy(xpath="//input[@value='Log In']")
     public WebElement logInButton;
 
-
     //--METHODS--
 
     /*
