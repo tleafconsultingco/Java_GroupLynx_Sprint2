@@ -33,3 +33,9 @@ Feature: User should be able to login
     When user is on the login page
     Then user sees "rememberMe" box
 
+    @now
+    Scenario: Verify password masked
+      When user is on the login page
+      Then password should be masked
+
+

@@ -53,10 +53,15 @@ public class AbleToLoginStepDefs {
         loginPage.rememberMe.click();
         Assert.assertTrue("Not selected", loginPage.rememberMe.isSelected());
         Assert.assertTrue("No text",loginPage.rememberMeText.isDisplayed());
+        System.out.println("Remember me box is present and clickable");
 
     }
 
-
+    @Then("password should be masked")
+    public void passwordShouldBeMasked() {
+        Assert.assertEquals("negative","password", loginPage.attribute.getAttribute("type"));
+        System.out.println("password masked");
+    }
 }
 
 
