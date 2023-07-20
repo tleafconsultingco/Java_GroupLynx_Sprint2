@@ -2,14 +2,11 @@ package com.LynxSprint2.step_definitions;
 
 import com.LynxSprint2.pages.CompanyStructurePage;
 import com.LynxSprint2.pages.LoginPage;
-import com.LynxSprint2.utilities.BrowserUtils;
 import com.LynxSprint2.utilities.Driver;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
 
 public class CompanyStructureStepDefs {
     CompanyStructurePage companyStructurePage = new CompanyStructurePage();
@@ -19,10 +16,15 @@ public class CompanyStructureStepDefs {
     @When("user is logged in with valid username and password")
     public void userIsLoggedInWithValidAnd() {
         Driver.getDriver().get("https://qa.azulcrm.com/");
-        loginpage.userName.sendKeys("hr1@cybertekschool.com");
-        loginpage.password.sendKeys("UserUser");
-        loginpage.submit.click();
+        loginpage.usernameField.sendKeys("hr1@cybertekschool.com");
+        loginpage.passwordField.sendKeys("UserUser");
+        loginpage.logInButton.click();
         //loginpage.login("hr1@cybertekschool.com","UserUser");
+    }
+
+    @When("user logs in with {string},{string}")
+    public void theUserIsLoggedInAs(String username, String password) {
+        loginpage.login(username,password);
     }
 
     @And("{string} is on the landing page")
@@ -42,7 +44,7 @@ public class CompanyStructureStepDefs {
 
     @When("the hr user is logged in as {string}, {string}")
     public void theHrUserIsLoggedInAs(String username, String password) {
-        loginpage.login("hr1@cybertekschool.com","UserUser");
+        loginpage.login(username,password);
     }
 
     @Then("hr user should be able to add department")
