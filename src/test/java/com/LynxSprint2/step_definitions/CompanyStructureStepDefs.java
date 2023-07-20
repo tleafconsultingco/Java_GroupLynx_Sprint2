@@ -46,6 +46,9 @@ public class CompanyStructureStepDefs {
 
     @Then("user should not see Add Department option")
     public void userShouldNotSeeAddDepartmentOption() {
-        //TODO: how to verify web element is not displayed?
+        //The below code doesn't work because the element is not on the page
+        //Assert.assertTrue(!companyStructurePage.addDepartmentButton.isDisplayed());
+
+        //Do I just leave this blank? Is that best practice?
     }
 }

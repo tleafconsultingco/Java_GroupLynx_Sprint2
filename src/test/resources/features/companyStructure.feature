@@ -29,13 +29,13 @@ Feature: Functions on the Company Structure under Employee Menu
     And user clicks on Employees menu
     Then hr user should be able to add department
 
-  @passed
+  @haveQuestions
   Scenario: Helpdesk user does not have "add department" option from the company structure
     When the user logs in as a "Helpdesk"
     And user clicks on Employees menu
     Then user should not see Add Department option
 
-  @passed
+  @haveQuestions
   Scenario: Marketing user does not have "add department" option from the company structure
     When the user logs in as a "Marketing"
     And user clicks on Employees menu
