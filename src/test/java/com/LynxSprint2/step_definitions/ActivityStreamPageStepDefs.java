@@ -83,6 +83,8 @@ ActivityStreamPage activityStreamPage = new ActivityStreamPage();
         String workFlowAct = activityStreamPage.workFlow.getText();
         Assert.assertEquals(workFlowAct, workflow);
 
+        //something
+
     }
 
 }
