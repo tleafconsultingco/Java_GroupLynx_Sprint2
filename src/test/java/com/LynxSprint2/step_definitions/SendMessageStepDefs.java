@@ -7,6 +7,7 @@ import com.LynxSprint2.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 
 public class SendMessageStepDefs {
 
@@ -18,10 +19,12 @@ public class SendMessageStepDefs {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
     }
-    @Given("user clicks Message Tab")
-    public void user_clicks_message_tab() {
 
+    @Given("user clicks {string} tab")
+    public void user_clicks_tab(String modelName) {
+        Driver.getDriver().findElement(By.xpath("//span[.='"+ modelName +"']")).click();
     }
+
     @When("user types message to Message Box")
     public void user_types_message_to_message_box() {
 
