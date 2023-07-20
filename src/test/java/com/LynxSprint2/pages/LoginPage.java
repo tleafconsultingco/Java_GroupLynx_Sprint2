@@ -1,5 +1,6 @@
 package com.LynxSprint2.pages;
 
+import com.LynxSprint2.utilities.BrowserUtils;
 import com.LynxSprint2.utilities.ConfigurationReader;
 import com.LynxSprint2.utilities.Driver;
 import org.openqa.selenium.WebElement;
@@ -30,6 +31,7 @@ public class LoginPage {
     public void login(String username, String password) {
         usernameField.sendKeys(username);
         passwordField.sendKeys(password);
+        BrowserUtils.sleep(3);
         logInButton.click();
         // verification that we logged
     }
