@@ -1,7 +1,7 @@
 @login @passed
 Feature: User types logged in with valid credentials
 
-  @passed
+  @testing
   Scenario Outline: Verify login with different user types
     Given user logs in as "<userType>"
     Then user is on the home page
