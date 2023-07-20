@@ -2,7 +2,7 @@
 Feature: User should be able to login
 
   Background: User is already on the login page
-    Given the user is on the login page
+    Given user is on the login page
 
   Scenario Outline: Verify login with different Valid credentials
     When users logging in with Valid credentials "<userType>"

@@ -53,7 +53,7 @@ public class AbleToLoginStepDefs {
         loginPage.rememberMe.click();
         Assert.assertTrue("Not selected", loginPage.rememberMe.isSelected());
         Assert.assertTrue("No text",loginPage.rememberMeText.isDisplayed());
-        System.out.println("Remember me box is present and clickable");
+        System.out.println("Remember me box is present and clickable, and text is present");
 
     }
 
