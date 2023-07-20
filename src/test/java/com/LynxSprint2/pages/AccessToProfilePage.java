@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import javax.xml.xpath.XPath;
+
 
 public class AccessToProfilePage {
 
@@ -32,8 +32,6 @@ public class AccessToProfilePage {
 
     @FindBy(xpath="Conversations\t\t\t\t\t\t")
     public WebElement ConversationsButton;
-
-
 
 
     @FindBy(xpath="//span[@id=\"pagetitle\"]")
