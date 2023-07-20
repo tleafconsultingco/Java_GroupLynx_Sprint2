@@ -14,8 +14,10 @@ public class LoginPage {
     }
 
     //--LOCATORS--
+    @FindBy(xpath = "//div[@class='errortext']")
+    public WebElement errMessage;
     @FindBy(xpath = "//input[@type='password']")
-    public WebElement attribute;
+    public WebElement attribute1;
     @FindBy(xpath="//input[@name='USER_LOGIN']")
     public WebElement usernameField;
     @FindBy(xpath="//input[@name='USER_PASSWORD']")
