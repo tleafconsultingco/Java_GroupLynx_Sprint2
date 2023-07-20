@@ -15,8 +15,8 @@ public class LoginStepDefs {
     LoginPage loginPage = new LoginPage();
 
     @Given("user logs in as {string}")
-    public void user_logs_in_as(String username, String password) {
-        loginPage.login(username,password);
+    public void user_logs_in_as(String userType) {
+        loginPage.loginAsUserType(userType);
     }
 
     @Given("user logs in as {string} user")
