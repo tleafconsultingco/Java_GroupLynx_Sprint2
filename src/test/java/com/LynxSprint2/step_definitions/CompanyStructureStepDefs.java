@@ -13,11 +13,6 @@ public class CompanyStructureStepDefs {
     CompanyStructurePage companyStructurePage = new CompanyStructurePage();
     LoginPage loginpage = new LoginPage();
 
-    @When("user logs in with {string},{string}")
-    public void theUserIsLoggedInAs(String username, String password) {
-        loginpage.login(username,password);
-
-    }
 
     @And("{string} is on the landing page")
     public void isOnTheLandingPage(String userType) {
