@@ -7,8 +7,8 @@ Feature: User types logged in with valid credentials
     Then user is on the home page
     Examples:
       | userType  |
-      | hr1       |
-      | helpdesk1 |
+      | hr       |
+      | helpdesk |
       | marketing |
 
   @passed
