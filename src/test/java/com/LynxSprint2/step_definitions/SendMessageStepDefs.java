@@ -20,16 +20,17 @@ public class SendMessageStepDefs {
 
     }
 
-
-
-    @When("user types message to Message Box")
-    public void user_types_message_to_message_box() {
+    @When("user types {string} to Message Box")
+    public void user_types_to_message_box(String message) {
 
     }
-    @When("user click All Employees in To Box")
-    public void user_click_all_employees_in_to_box() {
+    @When("user click {string} in To Box")
+    public void user_click_in_to_box(String string) {
 
     }
+
+
+
     @Then("user sends the message")
     public void user_sends_the_message() {
 
