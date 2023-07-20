@@ -20,10 +20,7 @@ public class SendMessageStepDefs {
 
     }
 
-    @Given("user clicks {string} tab")
-    public void user_clicks_tab(String modelName) {
-        Driver.getDriver().findElement(By.xpath("//span[.='"+ modelName +"']")).click();
-    }
+
 
     @When("user types message to Message Box")
     public void user_types_message_to_message_box() {

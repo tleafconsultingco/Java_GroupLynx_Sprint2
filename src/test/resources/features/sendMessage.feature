@@ -14,8 +14,8 @@ Feature: Send Message Functionality
       Then user sends the message
       Examples:
         | userType  |
-        | hr1       |
-        | helpdesk1 |
+        | hr       |
+        | helpdesk |
         | marketing |
 
 
