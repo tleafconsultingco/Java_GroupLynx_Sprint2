@@ -13,8 +13,6 @@ public class MessagePage {
     }
 
 
-
-
     @FindBy (xpath = "//span[@id='feed-add-post-form-tab-message']")
     public WebElement messageTab;
     //message button to expand message tab
@@ -41,7 +39,7 @@ public class MessagePage {
     public WebElement addFileButton;
     //button to add file
 
-    @FindBy (xpath = "//input[@name='bxu_files[]']")
+    @FindBy (xpath = "(//input[@class='diskuf-fileUploader wd-test-file-light-inp diskuf-filemacos'])[1]")
     public WebElement uploadFileButton;
     //button to upload a file from directory
 
@@ -55,6 +53,7 @@ public class MessagePage {
 
     @FindBy (xpath = "//span[@class='del-but']")
     public WebElement cancelFileUpload;
+    //button to cancel file upload
 
     @FindBy(xpath = "(//div[@class='feed-post-text-block-inner-inner']//a)[1]")
     public WebElement clickTitle;

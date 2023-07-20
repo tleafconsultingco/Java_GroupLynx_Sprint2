@@ -1,23 +1,40 @@
 @B29G26-272
 Feature: Upload files and pictures feature
 
+  User Story:
+  As a user, I should be able to upload files and pictures as messages
 
-	@B29G26-269
-	Scenario: User should be able to upload file and pictures.
-		Given the user is on the message composition page
-		    When the user selects a valid file or picture to upload
-		    Then the file or picture should be successfully uploaded	
+  Acceptance Criteria:
+  1. User should be able to upload file and pictures. Supported file formats .pdf, .txt, .jpeg, .png, .docx
+  2. User should be able to insert the files and images into the text
+  3. User should be able to remove files and images at any time before sending
 
-	
-	@B29G26-270
-	Scenario: User inserts files and images into the text
-		Given the user is composing a message
-		    When the user inserts a file or image into the text
-		    Then the file or image should be displayed in the message text	
 
-	
-	@B29G26-271
-	Scenario: User removes files and images before sending
-		Given the user has inserted a file or image in the message text
-		    When the user removes the file or image
-		    Then the file or image should no longer be displayed in the message text
+  @B29G26-269
+  Scenario Outline: User should be able to upload file and pictures.
+    Given user logs in as "<userType>"
+    When user clicks "Message" tab
+    And user clicks "Upload file" icon
+    #And user clicks "Upload File Button"
+    And user uploads the following files
+      | message.txt |
+    Then files or pictures are successfully uploaded
+    Examples:
+      | userType  |
+      | hr        |
+      #| helpdesk  |
+      #| marketing |
+
+
+  @B29G26-270
+  Scenario: User inserts files and images into the text
+    Given files or pictures are successfully uploaded
+    When user clicks "Insert in text" button
+    Then files or pictures are inserted in the message text box
+
+
+  @B29G26-271
+  Scenario: User removes files and images before sending
+    Given files or pictures are inserted in the message text box
+    When user clicks cancel button
+    Then files or pictures are removed from message box
