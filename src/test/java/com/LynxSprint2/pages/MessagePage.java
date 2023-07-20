@@ -1,6 +1,8 @@
 package com.LynxSprint2.pages;
 
 import com.LynxSprint2.utilities.Driver;
+import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -17,7 +19,7 @@ public class MessagePage {
     public WebElement messageTab;
     //message button to expand message tab
 
-    @FindBy(xpath = "//span[@class='bxhtmled-top-bar-btn bxhtmled-button-link']")
+    @FindBy(xpath = "//span[@title='Link']")
     public WebElement linkButton;
 
     @FindBy(xpath = "//input[@id='linkidPostFormLHE_blogPostForm-text']")
@@ -53,6 +55,13 @@ public class MessagePage {
 
     @FindBy (xpath = "//span[@class='del-but']")
     public WebElement cancelFileUpload;
+
+    @FindBy(xpath = "(//div[@class='feed-post-text-block-inner-inner']//a)[1]")
+    public WebElement clickTitle;
+
+
+
+
 
 
 

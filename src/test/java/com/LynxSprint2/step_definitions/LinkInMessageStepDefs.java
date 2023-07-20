@@ -1,23 +1,33 @@
 package com.LynxSprint2.step_definitions;
 
 import com.LynxSprint2.pages.MessagePage;
+import com.LynxSprint2.utilities.Driver;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Wait;
+
+import java.util.Set;
 
 public class LinkInMessageStepDefs {
 
     MessagePage messagePage = new MessagePage();
 
-    @When("user clicks the message button")
-    public void user_clicks_the_message_button() {
-      messagePage.messageTab.click();
-    }
-    @When("user clicks the link button")
-    public void user_clicks_the_link_button() {
-    messagePage.linkButton.click();
 
+
+    @And("user clicks the message button")
+    public void userClicksTheMessageButton() {
+        messagePage.messageTab.click();
     }
+
+    @And("user clicks the link button")
+    public void userClicksTheLinkButton() {
+        messagePage.linkButton.click();
+    }
+
     @When("user types {string} in text box")
     public void user_types_in_text_box(String string) {
     messagePage.textInput.sendKeys(string);
@@ -39,22 +49,44 @@ public class LinkInMessageStepDefs {
 
     }
 
-
-    @Then("user should see message with link")
-    public void userShouldSeeMessageWithLink() {
-        
+    @And("user sees message with link")
+    public void userSeesMessageWithLink() {
     }
-/*
+
+
     @And("user clicks the link in new message")
-    public void userClicksTheLinkInNewMessage() {
-        // double check with leena 
+    public void userClicksTheLinkInNewMessage() throws InterruptedException {
+        Thread.sleep(1000);
+     messagePage.clickTitle.click();
     }
 
-    @Then("user verify URL")
-    public void userVerifyURL() {
-     
-       
+    @Then("user verify {string} URL")
+    public void userVerifyURL(String url) {
+        String mainWindowHandle = Driver.getDriver().getWindowHandle();
+        Set<String> allHandles = Driver.getDriver().getWindowHandles();
+        for(String handle : allHandles){
+            if(!handle.equals(mainWindowHandle)){
+                Driver.getDriver().switchTo().window(handle);
+                break;
+            }
+
+        }
+        String titleOfNewTab = Driver.getDriver().getTitle();
+        String expectedTitle = url;
+        Assert.assertTrue(titleOfNewTab.equals(expectedTitle));
+
+
+        System.out.println("Expected Title: " + expectedTitle + "\n Actual Title: " + titleOfNewTab);
     }
-    
- */
+
+
+
+
+
+
+
+
+
+
+
 }
