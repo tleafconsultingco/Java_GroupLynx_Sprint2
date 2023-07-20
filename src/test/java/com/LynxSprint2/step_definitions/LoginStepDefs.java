@@ -14,22 +14,18 @@ public class LoginStepDefs {
 
     LoginPage loginPage = new LoginPage();
 
-    @Given("the user is on the login page")
-    public void the_user_is_on_the_login_page() {
+    @Given("user logs in as {string}")
+    public void user_logs_in_as(String userType) {
+        loginPage.loginAsUserType(userType);
     }
 
-    @When("user is logged in as {string},{string}")
-    public void user_is_logged_in_as(String username, String password) {
-        loginPage.login(username,password);
-    }
-
-    @When("the user logs in as a {string}")
-    public void theUserLogsInAsA(String userType) {
+    @Given("user logs in as {string} user")
+    public void user_logs_in_as_user(String userType) {
        loginPage.loginAsUserType(userType);
     }
 
-    @Then("the user is on the home page")
-    public void theUserIsOnTheHomePage() {
+    @Then("user is on the home page")
+    public void user_is_on_the_home_page() {
     }
 }
 

@@ -1,29 +1,27 @@
 @login @passed
 Feature: User types logged in with valid credentials
 
-  Background: User is already on the login page
-    Given the user is on the login page
-
-  @passed
+  @testing
   Scenario Outline: Verify login with different user types
-    When user is logged in as "<username>","<password>"
+    Given user logs in as "<userType>"
+    Then user is on the home page
     Examples:
-      | username                       | password |
-      | hr1@cybertekschool.com         | UserUser |
-      | helpdesk1@cybertekschool.com   | UserUser |
-      | marketing94@cybertekschool.com | UserUser |
+      | userType  |
+      | hr       |
+      | helpdesk |
+      | marketing |
 
   @passed
   Scenario: Login as a Hr
-    When the user logs in as a "Hr"
-    Then the user is on the home page
+    Given user logs in as "Hr"
+    Then user is on the home page
 
   @passed
   Scenario: Login as a Helpdesk
-    When the user logs in as a "Helpdesk"
-    Then the user is on the home page
+    Given user logs in as "Helpdesk"
+    Then user is on the home page
 
   @passed
   Scenario: Login as a Marketing
-    When the user logs in as a "Marketing"
-    Then the user is on the home page
+    Given user logs in as "Marketing"
+    Then user is on the home page
