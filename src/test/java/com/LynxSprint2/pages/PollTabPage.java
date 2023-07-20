@@ -1,6 +1,5 @@
 package com.LynxSprint2.pages;
 
-import com.LynxSprint2.utilities.ConfigurationReader;
 import com.LynxSprint2.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -57,7 +56,7 @@ public class PollTabPage {
     public WebElement errorMessage;
 
     @FindBy(xpath = "//span[@class='feed-add-post-del-but']")
-    public WebElement cancelSenderPerson;
+    public WebElement clickXButton;
 
     @FindBy(xpath = "//span[text()='Please specify at least one person.']")
     public WebElement errorMsg;

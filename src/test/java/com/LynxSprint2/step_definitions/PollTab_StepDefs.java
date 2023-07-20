@@ -1,6 +1,5 @@
 package com.LynxSprint2.step_definitions;
 
-import com.LynxSprint2.pages.LoginPage;
 import com.LynxSprint2.pages.PollTabPage;
 import com.LynxSprint2.utilities.BrowserUtils;
 import com.LynxSprint2.utilities.ConfigurationReader;
@@ -9,8 +8,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-
-import java.util.Map;
 
 public class PollTab_StepDefs {
 
@@ -79,7 +76,7 @@ public class PollTab_StepDefs {
     @When("user does not specified recipient")
     public void user_does_not_specified_recipient() {
         //pollTabPage.recipientLink.sendKeys("");
-        pollTabPage.cancelSenderPerson.click();
+        pollTabPage.clickXButton.click();
         BrowserUtils.sleep(3);
         pollTabPage.sendButton.click();
     }
