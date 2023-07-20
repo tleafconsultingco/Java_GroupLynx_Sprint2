@@ -1,4 +1,4 @@
-@companyStructure @passed
+@companyStructure
 Feature: Functions on the Company Structure under Employee Menu
   User Story:
   As a user, I should be able to use functions on Company Structure under Employee menu.
