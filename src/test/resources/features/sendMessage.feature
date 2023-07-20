@@ -7,7 +7,7 @@ Feature: Send Message Functionality
 
     Scenario Outline: Send message validation
       Given user logs in as "<userType>"
-      When user clicks "Message" tab
+
       When user types message to Message Box
       And user click All Employees in To Box
       And user clicks send button
