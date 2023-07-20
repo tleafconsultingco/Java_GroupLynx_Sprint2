@@ -21,7 +21,6 @@ public class LoginStepDefs {
     @When("user is logged in as {string},{string}")
     public void user_is_logged_in_as(String username, String password) {
         loginPage.login(username,password);
-        BrowserUtils.sleep(2);
     }
 
     @When("the user logs in as a {string}")
