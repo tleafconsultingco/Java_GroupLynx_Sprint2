@@ -14,9 +14,9 @@ public class ableToLoginStepDefs {
 
     LoginPage loginPage = new LoginPage();
 
-    @When("users logging in with Valid {string},{string}")
-    public void users_Logging_In_With_Valid(String username, String password) {
-        loginPage.login(username,password);
+    @When("users logging in with Valid credentials {string}")
+    public void usersLoggingInWithValidCredentials(String userType) {
+        loginPage.loginAsUserType(userType);
     }
     @Then("user should land on Home page with {string}")
     public void userShouldLandOnHomePageWith(String title) {
@@ -30,12 +30,33 @@ public class ableToLoginStepDefs {
     public void usersLoggingInWithInValid(String username, String password) {
         loginPage.login(username,password);
     }
-    @Then("user should see validation message {string}")
-    public void userShouldSeeValidationMessage(String message) {
+    @Then("user should see error message {string}")
+    public void userShouldSeeErrorMessage(String message) {
         message= "Incorrect login or password";
         Assert.assertEquals("Not match",message,loginPage.errMessage.getText());
         System.out.println("Error message");
     }
+
+    @When("users logging in with one empty text field {string},{string}")
+    public void usersLoggingInWithOneEmptyTextField(String username, String password) {
+        loginPage.login(username,password);
+    }
+    @Then("user should see validation message {string}")
+    public void userShouldSeeValidationMessage(String message) {
+        message= "Please fill out this field";
+        Assert.assertEquals("Not match",message,loginPage.errMessage.getText());
+        System.out.println("Validation message");
+    }
+
+    @When("user is on the login page")
+    public void userIsOnTheLoginPage() {
+    }
+    @Then("user sees {string} box")
+    public void userSeesBox(String arg0) {
+
+    }
+
+
 }
 
 
