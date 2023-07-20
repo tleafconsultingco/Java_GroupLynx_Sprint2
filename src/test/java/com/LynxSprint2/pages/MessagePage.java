@@ -10,9 +10,27 @@ public class MessagePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+
+
+
     @FindBy (xpath = "//span[@id='feed-add-post-form-tab-message']")
     public WebElement messageTab;
     //message button to expand message tab
+
+    @FindBy(xpath = "//span[@class='bxhtmled-top-bar-btn bxhtmled-button-link']")
+    public WebElement linkButton;
+
+    @FindBy(xpath = "//input[@id='linkidPostFormLHE_blogPostForm-text']")
+    public WebElement textInput;
+
+    @FindBy(xpath = "//input[@id='linkidPostFormLHE_blogPostForm-href']")
+     public WebElement linkText;
+
+    @FindBy(xpath = "//input[@value='Save']")
+    public WebElement saveButton;
+
+    @FindBy(xpath = "//button[@id='blog-submit-button-save']")
+    public WebElement sendButton;
 
     @FindBy (xpath="//iframe[@class='bx-editor-iframe']")
     public WebElement MessageBox;
