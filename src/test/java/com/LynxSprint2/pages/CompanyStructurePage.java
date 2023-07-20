@@ -12,13 +12,20 @@ public class CompanyStructurePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    //--LOCATORS
+
+    //"Employees" menu button on the left side of page
     @FindBy(xpath = "//a[@title='Employees']")
     public WebElement employeeMenuButton;
 
+    //page title when on the Employees page
     @FindBy(xpath = "//span[@id='pagetitle']")
     public WebElement pageTitle;
 
+    //"ADD DEPARTMENT" button
     @FindBy(xpath = "//span[.='Add department']")
     public WebElement addDepartmentButton;
+
+    //--METHODS
 
 }
