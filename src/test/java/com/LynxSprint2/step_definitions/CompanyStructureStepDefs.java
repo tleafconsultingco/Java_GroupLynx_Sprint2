@@ -5,24 +5,18 @@ import com.LynxSprint2.pages.LoginPage;
 import com.LynxSprint2.utilities.BrowserUtils;
 import com.LynxSprint2.utilities.Driver;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
 
 public class CompanyStructureStepDefs {
     CompanyStructurePage companyStructurePage = new CompanyStructurePage();
     LoginPage loginpage = new LoginPage();
 
+    @When("user logs in with {string},{string}")
+    public void theUserIsLoggedInAs(String username, String password) {
+        loginpage.login(username,password);
 
-    @When("user is logged in with valid username and password")
-    public void userIsLoggedInWithValidAnd() {
-        Driver.getDriver().get("https://qa.azulcrm.com/");
-        loginpage.userName.sendKeys("hr1@cybertekschool.com");
-        loginpage.password.sendKeys("UserUser");
-        loginpage.submit.click();
-        //loginpage.login("hr1@cybertekschool.com","UserUser");
     }
 
     @And("{string} is on the landing page")
@@ -42,7 +36,7 @@ public class CompanyStructureStepDefs {
 
     @When("the hr user is logged in as {string}, {string}")
     public void theHrUserIsLoggedInAs(String username, String password) {
-        loginpage.login("hr1@cybertekschool.com","UserUser");
+        loginpage.login(username,password);
     }
 
     @Then("hr user should be able to add department")
@@ -52,6 +46,9 @@ public class CompanyStructureStepDefs {
 
     @Then("user should not see Add Department option")
     public void userShouldNotSeeAddDepartmentOption() {
-        //TODO: how to verify web element is not displayed?
+        //The below code doesn't work because the element is not on the page
+        //Assert.assertTrue(!companyStructurePage.addDepartmentButton.isDisplayed());
+
+        //Do I just leave this blank? Is that best practice?
     }
 }
