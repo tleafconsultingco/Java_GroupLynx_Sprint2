@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-    public LoginPage(){
+    public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -18,11 +18,11 @@ public class LoginPage {
     public WebElement errMessage;
     @FindBy(xpath = "//input[@type='password']")
     public WebElement attribute1;
-    @FindBy(xpath="//input[@name='USER_LOGIN']")
+    @FindBy(xpath = "//input[@name='USER_LOGIN']")
     public WebElement usernameField;
-    @FindBy(xpath="//input[@name='USER_PASSWORD']")
+    @FindBy(xpath = "//input[@name='USER_PASSWORD']")
     public WebElement passwordField;
-    @FindBy(xpath="//input[@value='Log In']")
+    @FindBy(xpath = "//input[@value='Log In']")
     public WebElement logInButton;
 
     //--METHODS--
@@ -41,24 +41,14 @@ public class LoginPage {
     /*
     Log in as a specific userType
      */
-    public void loginAsUserType(String userType){
-        String username = "",
-                password = "";
+    public void loginAsUserType(String userType) {
 
-        if (userType.equalsIgnoreCase("Hr")){
-            username = ConfigurationReader.getProperty("hr_username");
-            password = ConfigurationReader.getProperty("hr_password");
-        } else if (userType.equalsIgnoreCase("Helpdesk")) {
-            username = ConfigurationReader.getProperty("helpdesk_username");
-            password = ConfigurationReader.getProperty("helpdesk_password");
-        } else if (userType.equalsIgnoreCase("Marketing")){
-            username = ConfigurationReader.getProperty("marketing_username");
-            password = ConfigurationReader.getProperty("marketing_password");
-        }
-
+        String username = ConfigurationReader.getProperty(userType + "_username");
+        String password = ConfigurationReader.getProperty(userType + "_password");
         usernameField.sendKeys(username);
         passwordField.sendKeys(password);
         logInButton.click();
+
     }
 
 
