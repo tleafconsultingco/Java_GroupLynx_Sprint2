@@ -25,13 +25,13 @@ public class AccessToProfilePage {
     public WebElement driverButton;
 
     @FindBy(xpath="//a[.=\"Tasks\t\t\t\t\t\t\"]")
-    public WebElement TasksButton;
+    public WebElement tasksButton;
 
     @FindBy(xpath="//a[.=\"Calendar\t\t\t\t\t\t\"]")
     public WebElement calendarButton;
 
-    @FindBy(xpath="Conversations\t\t\t\t\t\t")
-    public WebElement ConversationsButton;
+    @FindBy(xpath="//a[.=\"Conversations\t\t\t\t\t\t\"]")
+    public WebElement conversationsButton;
 
 
     @FindBy(xpath="//span[@id=\"pagetitle\"]")
