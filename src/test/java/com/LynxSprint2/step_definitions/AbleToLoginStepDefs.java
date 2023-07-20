@@ -1,16 +1,12 @@
 package com.LynxSprint2.step_definitions;
 
 import com.LynxSprint2.pages.LoginPage;
-import com.LynxSprint2.utilities.BrowserUtils;
-import com.LynxSprint2.utilities.ConfigurationReader;
 import com.LynxSprint2.utilities.Driver;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class ableToLoginStepDefs {
+public class AbleToLoginStepDefs {
 
     LoginPage loginPage = new LoginPage();
 
@@ -24,7 +20,6 @@ public class ableToLoginStepDefs {
         Assert.assertTrue("NO TITLE", Driver.getDriver().getTitle().contains(title));
         System.out.println("Logged in");
     }
-
 
     @When("users logging in with inValid {string},{string}")
     public void usersLoggingInWithInValid(String username, String password) {
@@ -52,7 +47,12 @@ public class ableToLoginStepDefs {
     public void userIsOnTheLoginPage() {
     }
     @Then("user sees {string} box")
-    public void userSeesBox(String arg0) {
+    public void userSeesBox(String rememberMeText) {
+        rememberMeText="Remember me on this computer";
+        Assert.assertTrue("No element", loginPage.rememberMe.isDisplayed());
+        loginPage.rememberMe.click();
+        Assert.assertTrue("Not selected", loginPage.rememberMe.isSelected());
+        Assert.assertTrue("No text",loginPage.rememberMeText.isDisplayed());
 
     }
 
