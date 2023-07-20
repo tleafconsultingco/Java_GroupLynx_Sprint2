@@ -14,10 +14,14 @@ public class LoginPage {
     }
 
     //--LOCATORS--
+    @FindBy(xpath = "//label[.='Remember me on this computer']")
+    public WebElement rememberMeText;
+    @FindBy(xpath = "//input[@id='USER_REMEMBER']")
+    public WebElement rememberMe;
     @FindBy(xpath = "//div[@class='errortext']")
     public WebElement errMessage;
     @FindBy(xpath = "//input[@type='password']")
-    public WebElement attribute1;
+    public WebElement attribute;
     @FindBy(xpath = "//input[@name='USER_LOGIN']")
     public WebElement usernameField;
     @FindBy(xpath = "//input[@name='USER_PASSWORD']")
