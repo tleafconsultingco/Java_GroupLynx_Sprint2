@@ -13,9 +13,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class AccessToProfilePageStepDefs {
-
     AccessToProfilePage accessToProfilePage =new AccessToProfilePage();
-
     @And("user clicks on username on")
     public void user_clicks_on_username_on() {
        accessToProfilePage.userNameButton.click();
