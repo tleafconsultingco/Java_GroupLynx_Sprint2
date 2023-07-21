@@ -35,13 +35,13 @@ public class PollTab_StepDefs {
     }
     @When("user write {string} into the question field")
     public void user_write_into_the_question_field(String question) {
-        pollTabPage.questionTab.sendKeys(question + Keys.ENTER);
+        pollTabPage.questionTab.sendKeys(question);
 
     }
     @When("user write the following answers")
     public void user_write_the_following_answers(Map<String, String> answers) {
-        pollTabPage.answerTab1.sendKeys("Hello");
-        pollTabPage.answerTab2.sendKeys("World");
+        pollTabPage.answerTab1.sendKeys("");
+        pollTabPage.answerTab2.sendKeys("");
     }
     @Then("user creates poll")
     public void user_creates_poll() {
@@ -57,7 +57,7 @@ public class PollTab_StepDefs {
     @Then("user sees {string} error message")
     public void user_sees_error_message(String expectedErrorMsg) {
         String actualErrorMsg = pollTabPage.errorMessage.getText();
-        Assert.assertTrue(expectedErrorMsg.equals(actualErrorMsg));
+        Assert.assertTrue(actualErrorMsg.equals(expectedErrorMsg));
     }
 
     @When("user clicks on {string} x button")
@@ -67,14 +67,14 @@ public class PollTab_StepDefs {
     }
 
     @And("user write {string} to the answer field")
-    public void userWriteToTheAnswerField(String answer_1) {
-        pollTabPage.answerTab1.sendKeys(answer_1 + Keys.ENTER);
+    public void userWriteToTheAnswerField(String answer) {
+        pollTabPage.answerTab1.sendKeys(answer);
     }
 
     @When("user write {string} to the message field")
     public void user_write_to_the_message_field(String message) {
         Driver.getDriver().switchTo().frame(Driver.getDriver().findElement(By.xpath("//iframe[@class='bx-editor-iframe']")));
-        pollTabPage.messageText.sendKeys(message + Keys.ENTER);
+        pollTabPage.messageText.sendKeys(message);
         Driver.getDriver().switchTo().defaultContent();
 
 
@@ -85,9 +85,8 @@ public class PollTab_StepDefs {
     }
 
 
-    @Then("user sees {string} error message")
-    public void userSeesErrorMessage(String expectedErrorMsg) {
-
+    @Then("user see The question {string} has no answers. error message")
+    public void userSeeTheQuestionHasNoAnswersErrorMessage(String expectedErrorMsg) {
         String actualErrorMsg = pollTabPage.errorMessage.getText();
         Assert.assertTrue(actualErrorMsg.contains(expectedErrorMsg));
     }
