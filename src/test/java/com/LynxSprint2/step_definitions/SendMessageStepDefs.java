@@ -65,6 +65,8 @@ Assert.assertTrue(messagePage.ErrorMsgForNoMsg.isDisplayed());
     @Then("user cancels sending message any time before sending.")
     public void user_cancels_sending_message_any_time_before_sending() {
        messagePage.CancelButton.click();
+
+
     }
 
     @Then("user sends message")
@@ -73,7 +75,6 @@ Assert.assertTrue(messagePage.ErrorMsgForNoMsg.isDisplayed());
         Assert.assertTrue(messagePage.ToAllEmployees.isDisplayed());
 
     }
-
 
 
 }
