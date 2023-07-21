@@ -2,6 +2,7 @@ package com.LynxSprint2.pages;
 
 import com.LynxSprint2.utilities.Driver;
 import org.checkerframework.checker.nullness.qual.EnsuresNonNullIf;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,6 +20,7 @@ public class AccessToProfilePage {
 
     @FindBy(xpath="//span[text()=\"My Profile\"]")
     public WebElement myProfile;
+
 
     @FindBy(xpath="//a[.=\"General\"]")
     public WebElement generalButton;
@@ -38,8 +40,9 @@ public class AccessToProfilePage {
     @FindBy(xpath="//span[@id=\"pagetitle\"]")
     public WebElement pgeTitle;
 
-    @FindBy(xpath="//span[@id=\"pa;lkjifgetitle\"]")
-    public List<WebElement> j;
 
+   /* @FindBy(xpath="//div[@id=\"profile-menu-filter\"]//a")
+    public List<WebElement> elements;
+*/
 
 }

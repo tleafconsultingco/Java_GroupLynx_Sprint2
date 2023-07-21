@@ -7,6 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 
 
 import java.util.List;
@@ -31,5 +32,11 @@ public class AccessToProfilePageStepDefs {
         Assert.assertTrue(accessToProfilePage.tasksButton.isDisplayed());
         Assert.assertTrue(accessToProfilePage.calendarButton.isDisplayed());
         Assert.assertTrue(accessToProfilePage.conversationsButton.isDisplayed());
+
+       /* for (WebElement option:accessToProfilePage.elements) {
+            Assert.assertTrue(option.isDisplayed());
+        }
+    */
     }
+
 }
