@@ -6,30 +6,51 @@ Feature: Accessing Employees Page
   I want to access the Employees page
   So that I can view the available modules and Company Structure by default
 
-  Scenario Outline: Verify user views the Company Structure by default after clicking the Employees Module
+
+
+
+
+  Scenario Outline: Verify the modules on Employees page
     When user logs in as "<userType>"
-    And user clicks on Employees menu
-    Then I should be redirected to the Company Structure page
+    And user clicks on the Employees module
+    Then the following modules should be visible on the Employees page:
+      | Company Structure |
+      | Find Employee     |
+      | Telephone Directory |
+      | Staff Changes     |
+      | Efficiency Report |
+      | Honored Employees |
+      | Birthdays         |
+      | New page          |
+
 
     Examples:
       | userType  |
-      | hr        |
-      | helpdesk  |
-      #| marketing | cannot see the company structure
+      | hr       |
+      | helpdesk |
+      | marketing |
+
+
+  Scenario Outline:Verify Company Structure is displayed by default
+    Given user logs in as "<userType>"
+    When user clicks on the Employees module
+    Then user should see the Company Structure module as the default view
+    Examples:
+      | userType  |
+      | hr       |
+      | helpdesk |
+      | marketing |
 
 
 
-  Scenario: Verify the user views the modules in the Employees page
-    Given I am on the Employees page
-    Then I should see the following  modules:
-      | Company Structure  |
-      | Find Employee      |
-      | Telephone Directory|
-      | Staff Changes      |
-      | Efficiency Report  |
-      | Honored Employees  |
-      | Birthdays          |
-      | New page           |
+
+
+
+
+
+
+
+
 
 
 
