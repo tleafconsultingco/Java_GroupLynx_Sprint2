@@ -7,6 +7,7 @@ import com.LynxSprint2.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 
 public class SendMessageStepDefs {
@@ -20,20 +21,44 @@ public class SendMessageStepDefs {
 
     }
 
-    @When("user types {string} to Message Box")
-    public void user_types_to_message_box(String message) {
+   @When("user types message to Message Box")
+    public void user_types_message_to_message_box() throws InterruptedException {
+    Driver.getDriver().switchTo().frame(messagePage.MessageBox);
+    messagePage.MessageBox1.sendKeys("Hello World");
+    Thread.sleep(5000);
+    Driver.getDriver().switchTo().parentFrame();
 
     }
-    @When("user click {string} in To Box")
-    public void user_click_in_to_box(String string) {
 
+
+   // @When("user click All employees in To Box")
+    //public void user_click_all_employees_in_to_box() {
+    //    messagePage.AllEmployee.click();
+
+    @When("user deletes recipients in To Box")
+    public void user_deletes_recipients_in_to_box() {
+        messagePage.AllEmployeeDeleteBut.click();
+
+    }
+
+    @Then("user gets -Please specify at least one person- error message")
+    public void user_gets_please_specify_at_least_one_person_error_message() {
+        Assert.assertTrue(messagePage.ErrorMsgForNoRecipient.isDisplayed());
+    }
+
+    @Then("user gets -The message title is not specified- error message")
+    public void user_gets_the_message_title_is_not_specified_error_message() {
+Assert.assertTrue(messagePage.ErrorMsgForNoMsg.isDisplayed());
     }
 
 
 
-    @Then("user sends the message")
-    public void user_sends_the_message() {
-
-    }
 
 }
+
+
+
+
+
+
+
