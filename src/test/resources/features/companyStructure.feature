@@ -16,23 +16,23 @@ Feature: Functions on the Company Structure under Employee Menu
     Examples:
       | userType  |
       | hr        |
-      #| helpdesk  |
-      #| marketing |
+      | helpdesk  |
+      | marketing |
 
   @passed
   Scenario: HR user should be able to add a department from the company structure
-    When user logs in as "Hr" user
+    When user logs in as "Hr"
     And user clicks on "Employees" menu
     Then hr user should be able to add department
 
-  @haveQuestions
+  @passed
   Scenario: Helpdesk user does not have "add department" option from the company structure
-    When user logs in as "Helpdesk" user
+    When user logs in as "Helpdesk"
     And user clicks on "Employees" menu
     Then user should not see Add Department option
 
-  @haveQuestions
+  @passed
   Scenario: Marketing user does not have "add department" option from the company structure
-    When user logs in as "Marketing" user
+    When user logs in as "Marketing"
     And user clicks on "Employees" menu
     Then user should not see Add Department option
