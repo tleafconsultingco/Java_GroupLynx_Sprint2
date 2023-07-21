@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/LynxSprint2/step_definitions",
         dryRun = false,
-        tags = "@wip",
+        tags = "@B29G26-299",
         publish = true //generating a report with public link
 )
 public class CukesRunner {
