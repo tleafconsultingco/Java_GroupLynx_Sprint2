@@ -9,7 +9,7 @@ Feature: Functions on the Company Structure under Employee Menu
   3. There is no “ADD DEPARTMENT” option for Helpdesk and Marketing users.
 
   @passed
-  Scenario Outline: All user types display company structure
+  Scenario Outline: Verify ALL user types display company structure header on the company structure page
     When user logs in as "<userType>"
     And user clicks on "Employees" menu
     Then user sees "Company Structure" displayed
@@ -20,19 +20,19 @@ Feature: Functions on the Company Structure under Employee Menu
       | marketing |
 
   @passed
-  Scenario: HR user should be able to add a department from the company structure
+  Scenario: Verify HR user can add a department on the company structure page
     When user logs in as "Hr"
     And user clicks on "Employees" menu
     Then hr user should be able to add department
 
   @passed
-  Scenario: Helpdesk user does not have "add department" option from the company structure
+  Scenario: Verify HELPDESK user does not have "add department" option on the company structure page
     When user logs in as "Helpdesk"
     And user clicks on "Employees" menu
     Then user should not see Add Department option
 
   @passed
-  Scenario: Marketing user does not have "add department" option from the company structure
+  Scenario: Verify MARKETING user does not have "add department" option on the company structure page
     When user logs in as "Marketing"
     And user clicks on "Employees" menu
     Then user should not see Add Department option
