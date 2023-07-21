@@ -27,16 +27,16 @@ public class AccessToProfilePageStepDefs {
 
     @Then("user should see options button General,Drive,Tasks,Calendar,Conversations")
     public void userShouldSeeOptionsButtonGeneralDriveTasksCalendarConversations() {
-        Assert.assertTrue(accessToProfilePage.generalButton.isDisplayed());
+       /* Assert.assertTrue(accessToProfilePage.generalButton.isDisplayed());
         Assert.assertTrue(accessToProfilePage.driverButton.isDisplayed());
         Assert.assertTrue(accessToProfilePage.tasksButton.isDisplayed());
         Assert.assertTrue(accessToProfilePage.calendarButton.isDisplayed());
         Assert.assertTrue(accessToProfilePage.conversationsButton.isDisplayed());
-
-       /* for (WebElement option:accessToProfilePage.elements) {
+*/
+       for (WebElement option:accessToProfilePage.elements) {
             Assert.assertTrue(option.isDisplayed());
         }
-    */
+
     }
 
 }

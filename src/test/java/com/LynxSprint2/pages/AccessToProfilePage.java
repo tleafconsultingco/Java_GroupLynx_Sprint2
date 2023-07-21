@@ -21,7 +21,10 @@ public class AccessToProfilePage {
     @FindBy(xpath="//span[text()=\"My Profile\"]")
     public WebElement myProfile;
 
+    @FindBy(xpath="//span[@id=\"pagetitle\"]")
+    public WebElement pgeTitle;
 
+/*
     @FindBy(xpath="//a[.=\"General\"]")
     public WebElement generalButton;
 
@@ -36,13 +39,11 @@ public class AccessToProfilePage {
 
     @FindBy(xpath="//a[.=\"Conversations\t\t\t\t\t\t\"]")
     public WebElement conversationsButton;
-
-    @FindBy(xpath="//span[@id=\"pagetitle\"]")
-    public WebElement pgeTitle;
-
-
-   /* @FindBy(xpath="//div[@id=\"profile-menu-filter\"]//a")
-    public List<WebElement> elements;
 */
+
+
+   @FindBy(xpath="//div[@id=\"profile-menu-filter\"]//a")
+    public List<WebElement> elements;
+
 
 }
