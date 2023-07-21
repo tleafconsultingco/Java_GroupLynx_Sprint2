@@ -3,6 +3,7 @@ package com.LynxSprint2.step_definitions;
 import com.LynxSprint2.pages.LoginPage;
 import com.LynxSprint2.pages.SendAppreciationPage;
 import com.LynxSprint2.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.support.ui.Select;
@@ -36,6 +37,7 @@ public class SendAppreciationStepDefs {
     public void user_clicks_button() {
         sendAppreciationPage.sendButton.click();
     }
+
     @Then("user should see new message on Activity Stream")
     public void user_should_see_new_message_on() {
     }
@@ -46,4 +48,6 @@ public class SendAppreciationStepDefs {
         String password = credentials.get("password");
         loginPage.login(username,password);
     }
+
+
 }
