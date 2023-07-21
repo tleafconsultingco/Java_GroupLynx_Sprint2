@@ -79,6 +79,9 @@ public class MessagePage {
     @FindBy(xpath="//span[.='Delete']")
     public WebElement DeleteButtonForMsg;
 
+    @FindBy (xpath="//button[@id='blog-submit-button-cancel']")
+    public WebElement CancelButton;
+
 
 
 
