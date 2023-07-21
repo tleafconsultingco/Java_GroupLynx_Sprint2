@@ -14,31 +14,29 @@ Feature: Send an appreciation
 
   @passed
   Scenario Outline: User able to send an appreciation by filling in mandatory fields
-    When user logs in with "<username>","<password>"
+    When user logs in as "<userType>"
     And user clicks on More tab
     And user clicks on Appreciation option
     And user provides message title
     And user add a recipient using Add employees button
-    And user clicks SEND button
     Then user should see new message on Activity Stream
     Examples:
-      | username                       | password |
-      | hr1@cybertekschool.com         | UserUser |
-      | helpdesk1@cybertekschool.com   | UserUser |
-      | marketing94@cybertekschool.com | UserUser |
+      | userType  |
+      | hr        |
+      | helpdesk  |
+      | marketing |
 
-    @stillWorking
+  @stillWorking
   Scenario Outline: User able to send an appreciation by filling in mandatory fields
-    When user logs in with "<username>","<password>"
+    When user logs in as "<userType>"
     And user clicks on More tab
     And user clicks on Appreciation option
     And user provides message title
-
     Examples:
-      | username                       | password |
-      | hr1@cybertekschool.com         | UserUser |
-      | helpdesk1@cybertekschool.com   | UserUser |
-      | marketing94@cybertekschool.com | UserUser |
+      | userType  |
+      | hr        |
+      | helpdesk  |
+      | marketing |
 
 
 
