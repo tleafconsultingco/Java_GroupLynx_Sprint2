@@ -1,4 +1,4 @@
-@nilay
+
 Feature: Send Message Functionality
 
   Background: User is already in the log in page
@@ -41,3 +41,15 @@ Feature: Send Message Functionality
       | hr        |
       | helpdesk  |
       | marketing |
+
+@nilay
+    Scenario Outline: The message delivery is to be 'All employees' by default.
+      Given user logs in as "<userType>"
+      When user clicks "Message" tab
+      When user types message to Message Box
+      Then user deliveries message to All employees by default.
+    Examples:
+    | userType  |
+    | hr        |
+    | helpdesk  |
+    | marketing |

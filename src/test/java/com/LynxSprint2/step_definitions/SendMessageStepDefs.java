@@ -4,6 +4,7 @@ import com.LynxSprint2.pages.LoginPage;
 import com.LynxSprint2.pages.MessagePage;
 import com.LynxSprint2.utilities.ConfigurationReader;
 import com.LynxSprint2.utilities.Driver;
+import io.cucumber.java.bs.A;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -49,6 +50,16 @@ public class SendMessageStepDefs {
     @Then("user gets -The message title is not specified- error message")
     public void user_gets_the_message_title_is_not_specified_error_message() {
 Assert.assertTrue(messagePage.ErrorMsgForNoMsg.isDisplayed());
+    }
+
+    @Then("user deliveries message to All employees by default.")
+    public void user_deliveries_message_to_all_employees_by_default() {
+        messagePage.sendButton.click();
+        Assert.assertTrue(messagePage.ToAllEmployees.isDisplayed());
+       // messagePage.MoreButtonForMsg.click();
+        // messagePage.DeleteButtonForMsg.click();
+
+
     }
 
 
