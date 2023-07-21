@@ -25,6 +25,8 @@ public class CompanyStructureStepDefs {
     @Then("user sees {string} displayed")
     public void userSeesDisplayed(String titleHeader) {
         String actualTitle = companyStructurePage.pageTitle.getText();
+
+        //Assertion
         Assert.assertEquals(actualTitle,titleHeader);
     }
 
@@ -36,15 +38,27 @@ public class CompanyStructureStepDefs {
     @Then("hr user should be able to add department")
     public void hrUserShouldBeAbleToAddDepartment() {
         companyStructurePage.addDepartmentButton.click();
+
+        //Assertion
+        BrowserUtils.verifyElementDisplayed(companyStructurePage.addDepartmentButton);
+        /*
         Assert.assertTrue(companyStructurePage.addDepartmentButton.isDisplayed());
+         */
 
     }
 
     @Then("user should not see Add Department option")
     public void userShouldNotSeeAddDepartmentOption() {
+        //Assertion
+        BrowserUtils.verifyElementNotDisplayed(By.xpath("//span[.='Add department']"));
+
+       /*
         List<WebElement> addDepartmentButton = Driver.getDriver().findElements(By.xpath("//span[.='Add department']"));
         System.out.println("addDepartmentButton.size() = " + addDepartmentButton.size());
         Assert.assertTrue(addDepartmentButton.size()==0);
+         */
     }
+
+
 
 }
