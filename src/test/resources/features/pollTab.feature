@@ -80,7 +80,7 @@ Feature: Create a poll by clicking on Poll tab
     And user write "Message" to the message field
     And user write "Question" to the question field
     And user clicks send button
-    Then user sees "The question question has no answers." error message
+    Then user see The question "Question" has no answers. error message
     Examples:
       | userType  |
       | Hr        |

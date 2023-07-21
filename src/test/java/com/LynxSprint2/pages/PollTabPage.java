@@ -14,7 +14,6 @@ public class PollTabPage {
     @FindBy(xpath = "//span[text()='Poll']")
     public WebElement pollButton;
 
-
     @FindBy(xpath = "//span[text()='All employees']")
     public WebElement allEmployeesBtn ;
 
@@ -33,21 +32,15 @@ public class PollTabPage {
     @FindBy(xpath = "//input[@id='multi_0']")
     public WebElement checkbox;
 
-    @FindBy(xpath = "//*[@id='POST_TITLE']")
-    public WebElement messageTitle;
-
     @FindBy(xpath = "//span[@class='feed-add-post-del-but']")
     public WebElement clickXButton;
 
     @FindBy(xpath = "//*[@id='blog-submit-button-save']")
     public WebElement sendButton;
 
-
     @FindBy(xpath = "//span[@class='feed-add-info-text']")
     public WebElement errorMessage;
 
-
-    //@FindBy(xpath = "//body[@style='min-height: 184px;']")
     @FindBy(xpath = "//*[@contenteditable='true']")
     public WebElement messageText;
 
