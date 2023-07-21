@@ -67,6 +67,14 @@ Assert.assertTrue(messagePage.ErrorMsgForNoMsg.isDisplayed());
        messagePage.CancelButton.click();
     }
 
+    @Then("user sends message")
+    public void user_sends_message() {
+        messagePage.sendButton.click();
+        Assert.assertTrue(messagePage.ToAllEmployees.isDisplayed());
+
+    }
+
+
 
 }
 

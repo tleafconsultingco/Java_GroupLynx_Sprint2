@@ -14,12 +14,13 @@ Feature: Send Message Functionality
 
   Background: User is already in the log in page
     Given the user is on the login page
-
+@nilay
   Scenario Outline: Send message validation
     Given user logs in as "<userType>"
     When user clicks "Message" tab
     And user types message to Message Box
     And user clicks send button
+    Then user sends message
 
     Examples:
       | userType  |
@@ -28,7 +29,9 @@ Feature: Send Message Functionality
       | marketing |
 
 
-  Scenario Outline: Send message by filling the mandatory fields validation (The recipients of email can not be empty )
+  Scenario Outline: Send message by filling the mandatory fields validation
+  (The recipients of email can not be empty )
+
     Given user logs in as "<userType>"
     When user clicks "Message" tab
     When user types message to Message Box
@@ -42,7 +45,8 @@ Feature: Send Message Functionality
       | marketing |
 
 
-  Scenario Outline: Send message by filling the mandatory fields validation (Email text field can not be empty)
+  Scenario Outline: Send message by filling the mandatory fields validation
+  (Email text field can not be empty)
     Given user logs in as "<userType>"
     When user clicks "Message" tab
     And user clicks send button
@@ -65,7 +69,7 @@ Feature: Send Message Functionality
       | helpdesk  |
       | marketing |
 
-  @nilay
+
   Scenario Outline: Cancel sending messages at any time before sending.
     Given user logs in as "<userType>"
     When user clicks "Message" tab
