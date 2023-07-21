@@ -2,14 +2,19 @@ package com.LynxSprint2.step_definitions;
 
 import com.LynxSprint2.pages.EmployeesPage;
 import com.LynxSprint2.pages.LoginPage;
+import com.LynxSprint2.utilities.BrowserUtils;
+import com.LynxSprint2.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,14 +30,29 @@ public class AccessToEmployeesPageStepDefs {
     public void userClicksOnTheEmployeesModule() {
 
         employeesPage.employeesPageBtn.click();
+        //BrowserUtils.sleep(3);
+        //Driver.getDriver().manage().window().fullscreen();
+        //Driver.getDriver().manage().window().maximize();
+        Driver.getDriver().manage().window().setSize(new Dimension(1920, 1080));
+
+       // BrowserUtils.waitForVisibility(By.xpath("//div[@data-text='New page']"));
+
+
+
+
+
 
     }
 
 
     @Then("the following modules should be visible on the Employees page:")
-    public void theFollowingModulesShouldBeVisibleOnTheEmployeesPage() {
+    public void theFollowingModulesShouldBeVisibleOnTheEmployeesPage(List<String> expectedModules) {
+        BrowserUtils.sleep(3);
 
-        List<String> expectedModules = Arrays.asList(
+        List<String> visibleModules = BrowserUtils.getElementsText(employeesPage.modules);
+        Assert.assertEquals(expectedModules,visibleModules);
+
+       /* List<String> expectedModules = Arrays.asList(
                 "Company Structure",
                 "Find Employee",
                 "Telephone Directory",
@@ -43,11 +63,13 @@ public class AccessToEmployeesPageStepDefs {
                 "New page"
         );
 
-        List<String> visibleModules = employeesPage.getVisibleModules();
+        */
 
-        for (String module : expectedModules){
-            Assert.assertTrue("Module " + module + " should be visible.", visibleModules.contains(module));
-        }
+       // List<String> visibleModules = employeesPage.getVisibleModules();
+
+        //for (String module : expectedModules){
+        //    Assert.assertTrue("Module " + module + " should be visible.", visibleModules.contains(module));
+        //}
 
 
 
