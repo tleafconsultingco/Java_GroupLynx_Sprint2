@@ -41,7 +41,7 @@ public class MessagePage {
     public WebElement uploadFileButton;
     //button to upload a file from directory
 
-    @FindBy (xpath = "//span[@id='check-in-text-n2863']")
+    @FindBy (xpath = "//span[text()='Insert in text']")
     public WebElement insertInTextButton;
     //button to insert a file into message tab
 
@@ -53,8 +53,8 @@ public class MessagePage {
     public WebElement cancelFileUpload;
     //button to cancel file upload
 
-
-
+    @FindBy (xpath = "(//span[@class='diskuf-label-icon'])[1]")
+    public WebElement attachedFiles;
 
 
 
