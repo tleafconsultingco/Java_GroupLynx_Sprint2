@@ -26,7 +26,7 @@ public class SendMessageStepDefs {
     Driver.getDriver().switchTo().frame(messagePage.MessageBox);
     messagePage.MessageBox1.sendKeys("Hello World");
     Thread.sleep(5000);
-    Driver.getDriver().switchTo().parentFrame();
+    Driver.getDriver().switchTo().defaultContent();
 
     }
 
