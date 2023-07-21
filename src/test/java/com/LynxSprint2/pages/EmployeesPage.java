@@ -1,9 +1,15 @@
 package com.LynxSprint2.pages;
 
 import com.LynxSprint2.utilities.Driver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class EmployeesPage {
 
@@ -14,29 +20,57 @@ public class EmployeesPage {
     @FindBy(partialLinkText = "Employees")
     public WebElement employeesPageBtn;
 
-    @FindBy(xpath = "//span[.='Find Employee']")
+    @FindBy(xpath = "//div[@data-text='Company Structure']" )
+    public WebElement companyStructureMod;
+
+    @FindBy(xpath = "//div[@data-text='Find Employee']")
     public WebElement findEmployeeMod;
 
-    @FindBy(xpath = "//span[.='Telephone Directory']")
+    @FindBy(xpath = "//div[@data-text='Telephone Directory']")
     public WebElement telephoneDirectoryMod;
 
-    @FindBy(xpath = "//span[.='Staff Changes']")
+    @FindBy(xpath = "//div[@data-text='Staff Changes']")
     public WebElement staffChangesMod;
 
-    @FindBy(xpath = "//span[.='Efficiency Report'][1]")
+    @FindBy(xpath = "//div[@data-text='Efficiency Report']")
     public WebElement EfficiencyReportMod;
 
-    @FindBy(xpath = "//span[.='Honored Employees'][1]")
+    @FindBy(xpath = "//div[@data-text='Honored Employees']")
     public WebElement HonoredEmployeesMod;
 
-    @FindBy(xpath = "//span[.='Birthdays'][1]")
+    @FindBy(xpath = "//div[@data-text='Birthdays']")
     public WebElement BirthdaysMod;
 
-    @FindBy(xpath = "//span[.='New page'][1]")
+    @FindBy(xpath = "//div[@data-text='New page']")
     public WebElement newPageMod;
 
-    @FindBy(xpath = "//span[.='More']")
-    public WebElement Morebtn;
+    public String getDefaultModule(){
+        WebElement defaultModuleElement = companyStructureMod;
+        return defaultModuleElement.getText();
+    }
+
+    private WebDriver driver;
+
+    public EmployeesPage(WebDriver driver){
+        this.driver = driver;
+    }
+
+    public List<String> getVisibleModules(){
+        List<String> visibleModules = new ArrayList<>();
+
+        List<WebElement> moduleElements = driver.findElements(By.cssSelector("main-buttons-item-link"));
+
+        for(WebElement moduleElement : moduleElements){
+            if (moduleElement.isDisplayed()){
+                visibleModules.add(moduleElement.getText());
+            }
+        }
+        return visibleModules;
+    }
+
+
+
+
 
 
 
