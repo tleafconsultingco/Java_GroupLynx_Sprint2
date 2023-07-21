@@ -61,8 +61,8 @@ public class MessagePage {
     @FindBy (xpath="//body[@contenteditable='true']")
     public WebElement MessageBox1;
 
-    @FindBy (xpath = "//span[.='All employees']")
-    public WebElement AllEmployee;
+    @FindBy (xpath = "//span[.='To all employees']")
+    public WebElement ToAllEmployees;
 
     @FindBy (xpath = "//span[@class='feed-add-post-del-but']")
     public WebElement AllEmployeeDeleteBut;
@@ -72,6 +72,12 @@ public class MessagePage {
 
     @FindBy(xpath = "//span[.='The message title is not specified']")
     public WebElement ErrorMsgForNoMsg;
+
+    @FindBy(xpath="//span[@id='feed-post-more-3419']")
+    public WebElement MoreButtonForMsg;
+
+    @FindBy(xpath="//span[.='Delete']")
+    public WebElement DeleteButtonForMsg;
 
 
 
