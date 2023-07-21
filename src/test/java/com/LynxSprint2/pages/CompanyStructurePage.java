@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class CompanyStructurePage {
 
     public CompanyStructurePage(){
@@ -27,5 +29,10 @@ public class CompanyStructurePage {
     public WebElement addDepartmentButton;
 
     //--METHODS
+
+    public void webElementsEmployeePage(){
+        List<WebElement> addDepartmentButton = Driver.getDriver().findElements(By.xpath("//span[.='Add department']"));
+        addDepartmentButton.size();
+    }
 
 }

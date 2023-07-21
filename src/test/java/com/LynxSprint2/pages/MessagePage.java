@@ -58,6 +58,28 @@ public class MessagePage {
     @FindBy(xpath = "(//div[@class='feed-post-text-block-inner-inner']//a)[1]")
     public WebElement clickTitle;
 
+    @FindBy (xpath="//body[@contenteditable='true']")
+    public WebElement MessageBox1;
+
+    @FindBy (xpath = "//span[.='To all employees']")
+    public WebElement ToAllEmployees;
+
+    @FindBy (xpath = "//span[@class='feed-add-post-del-but']")
+    public WebElement AllEmployeeDeleteBut;
+
+    @FindBy (xpath = "//span[.='Please specify at least one person.']")
+    public WebElement ErrorMsgForNoRecipient;
+
+    @FindBy(xpath = "//span[.='The message title is not specified']")
+    public WebElement ErrorMsgForNoMsg;
+
+    @FindBy(xpath="//span[@id='feed-post-more-3419']")
+    public WebElement MoreButtonForMsg;
+
+    @FindBy(xpath="//span[.='Delete']")
+    public WebElement DeleteButtonForMsg;
+
+
 
 
 
