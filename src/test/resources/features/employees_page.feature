@@ -7,9 +7,7 @@ Feature: Accessing Employees Page
   So that I can view the available modules and Company Structure by default
 
 
-
-
-
+@modules
   Scenario Outline: Verify the modules on Employees page
     When user logs in as "<userType>"
     And user clicks on the Employees module
@@ -21,7 +19,7 @@ Feature: Accessing Employees Page
       | Efficiency Report |
       | Honored Employees |
       | Birthdays         |
-      | New page          |
+      | New page        |
 
 
     Examples:
