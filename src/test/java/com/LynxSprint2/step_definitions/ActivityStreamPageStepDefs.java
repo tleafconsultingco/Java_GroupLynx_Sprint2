@@ -87,4 +87,10 @@ ActivityStreamPage activityStreamPage = new ActivityStreamPage();
 
     }
 
+    @Then("user should see the {string}")
+    public void userShouldSeeThe(String options) {
+
+
+
+    }
 }

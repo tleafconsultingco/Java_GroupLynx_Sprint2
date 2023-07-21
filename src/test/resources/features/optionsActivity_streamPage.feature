@@ -2,8 +2,24 @@
 Feature: User should be able to see all the options on the Activity stream page
 
 
-  Background: User is on the login page
-    Given user is on the Activity stream page
+  Scenario Outline: Verify users can see all the options on the Activity stream page
+    Given user logs in as "<userType>"
+    When user is on the activity stream page
+    Then user should see the "<Options>"
+    Examples:
+
+      | userType  |
+      | hr        |
+      | helpdesk  |
+      | marketing |
+
+     Examples:
+      | Options   |
+      | Message   |
+      | Task      |
+      | Event     |
+      | Poll      |
+      | More      |
 
 
   Scenario: user login as helpdesk
