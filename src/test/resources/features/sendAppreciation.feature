@@ -1,3 +1,4 @@
+@sendAppreciation
 Feature: Send an appreciation
   US: As a user, I should be able to send appreciation by clicking on Appreciation tab under Active Stream.
 
@@ -13,32 +14,44 @@ Feature: Send an appreciation
   "Please specify at least one person."
 
   @passed
-  Scenario Outline: User able to send an appreciation by filling in mandatory fields
-    When user logs in with "<username>","<password>"
-    And user clicks on More tab
-    And user clicks on Appreciation option
-    And user provides message title
-    And user add a recipient using Add employees button
-    And user clicks SEND button
-    Then user should see new message on Activity Stream
+  Scenario Outline: Verify user can send an appreciation by filling in mandatory fields (AC01)
+    When user logs in as "<userType>"
+    And user clicks "More" tab
+    And user clicks on "Appreciation" option
+    And user provides "<messageTitle>" in message title
+    And user adds a recipient using Add employees button
+    And user clicks send button
+    Then user sees "<messageTitle>" message on Activity Stream
     Examples:
-      | username                       | password |
-      | hr1@cybertekschool.com         | UserUser |
-      | helpdesk1@cybertekschool.com   | UserUser |
-      | marketing94@cybertekschool.com | UserUser |
+      | userType  | messageTitle      |
+      | hr        | you are beautiful |
+      | helpdesk  | you are beautiful |
+      | marketing | you are beautiful |
 
-    @stillWorking
-  Scenario Outline: User able to send an appreciation by filling in mandatory fields
-    When user logs in with "<username>","<password>"
-    And user clicks on More tab
-    And user clicks on Appreciation option
-    And user provides message title
-
+  @fail
+  Scenario Outline: Verify the delivery is 'All employees' by default (AC02)
+    When user logs in as "<userType>"
+    And user clicks "More" tab
+    And user clicks on "Appreciation" option
+    Then user verifies "All employees" is in delivery
     Examples:
-      | username                       | password |
-      | hr1@cybertekschool.com         | UserUser |
-      | helpdesk1@cybertekschool.com   | UserUser |
-      | marketing94@cybertekschool.com | UserUser |
+      | userType  |
+      | hr        |
+      | helpdesk  |
+      | marketing |
+
+  @passed
+  Scenario Outline: Verify can cancel sending appreciation at any time before sending
+    When user logs in as "<userType>"
+    And user clicks "More" tab
+    And user clicks on "Appreciation" option
+    And user clicks the cancel button
+    Then user sees appreciation box collapse
+    Examples:
+      | userType  |
+      | hr        |
+      | helpdesk  |
+      | marketing |
 
 
 

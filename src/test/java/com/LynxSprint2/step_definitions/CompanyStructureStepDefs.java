@@ -8,24 +8,25 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class CompanyStructureStepDefs {
     CompanyStructurePage companyStructurePage = new CompanyStructurePage();
     LoginPage loginpage = new LoginPage();
 
-
-    @And("{string} is on the landing page")
-    public void isOnTheLandingPage(String userType) {
+    @And("user clicks on {string} menu")
+    public void userClicksOnMenu(String menuName) {
+        Driver.getDriver().findElement(By.xpath("//a[@title='"+menuName+"']")).click();
     }
 
-    @And("user clicks on Employees menu")
-    public void userClicksOnEmployeesMenu() {
-        companyStructurePage.employeeMenuButton.click();
-    }
-
-    @Then("user should see {string} displayed")
-    public void userShouldSeeDisplayed(String titleHeader) {
+    @Then("user sees {string} displayed")
+    public void userSeesDisplayed(String titleHeader) {
         String actualTitle = companyStructurePage.pageTitle.getText();
+
+        //Assertion
         Assert.assertEquals(actualTitle,titleHeader);
     }
 
@@ -37,13 +38,27 @@ public class CompanyStructureStepDefs {
     @Then("hr user should be able to add department")
     public void hrUserShouldBeAbleToAddDepartment() {
         companyStructurePage.addDepartmentButton.click();
+
+        //Assertion
+        BrowserUtils.verifyElementDisplayed(companyStructurePage.addDepartmentButton);
+        /*
+        Assert.assertTrue(companyStructurePage.addDepartmentButton.isDisplayed());
+         */
+
     }
 
     @Then("user should not see Add Department option")
     public void userShouldNotSeeAddDepartmentOption() {
-        //The below code doesn't work because the element is not on the page
-        //Assert.assertTrue(!companyStructurePage.addDepartmentButton.isDisplayed());
+        //Assertion
+        BrowserUtils.verifyElementNotDisplayed(By.xpath("//span[.='Add department']"));
 
-        //Do I just leave this blank? Is that best practice?
+       /*
+        List<WebElement> addDepartmentButton = Driver.getDriver().findElements(By.xpath("//span[.='Add department']"));
+        System.out.println("addDepartmentButton.size() = " + addDepartmentButton.size());
+        Assert.assertTrue(addDepartmentButton.size()==0);
+         */
     }
+
+
+
 }
