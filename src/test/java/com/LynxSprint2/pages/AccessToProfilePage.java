@@ -1,11 +1,13 @@
 package com.LynxSprint2.pages;
 
 import com.LynxSprint2.utilities.Driver;
+import org.checkerframework.checker.nullness.qual.EnsuresNonNullIf;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
+import java.util.List;
 
 public class AccessToProfilePage {
 
@@ -33,8 +35,11 @@ public class AccessToProfilePage {
     @FindBy(xpath="//a[.=\"Conversations\t\t\t\t\t\t\"]")
     public WebElement conversationsButton;
 
-
     @FindBy(xpath="//span[@id=\"pagetitle\"]")
     public WebElement pgeTitle;
+
+    @FindBy(xpath="//span[@id=\"pa;lkjifgetitle\"]")
+    public List<WebElement> j;
+
 
 }

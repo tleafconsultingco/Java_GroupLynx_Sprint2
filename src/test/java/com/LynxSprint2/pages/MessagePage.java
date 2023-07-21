@@ -1,6 +1,8 @@
 package com.LynxSprint2.pages;
 
 import com.LynxSprint2.utilities.Driver;
+import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -15,7 +17,7 @@ public class MessagePage {
     public WebElement messageTab;
     //message button to expand message tab
 
-    @FindBy(xpath = "//span[@class='bxhtmled-top-bar-btn bxhtmled-button-link']")
+    @FindBy(xpath = "//span[@title='Link']")
     public WebElement linkButton;
 
     @FindBy(xpath = "//input[@id='linkidPostFormLHE_blogPostForm-text']")
@@ -41,7 +43,7 @@ public class MessagePage {
     public WebElement uploadFileButton;
     //button to upload a file from directory
 
-    @FindBy (xpath = "//span[text()='Insert in text']")
+    @FindBy (xpath = "//span[@id='check-in-text-n2863']")
     public WebElement insertInTextButton;
     //button to insert a file into message tab
 
@@ -53,8 +55,37 @@ public class MessagePage {
     public WebElement cancelFileUpload;
     //button to cancel file upload
 
-    @FindBy (xpath = "(//span[@class='diskuf-label-icon'])[1]")
-    public WebElement attachedFiles;
+    @FindBy(xpath = "(//div[@class='feed-post-text-block-inner-inner']//a)[1]")
+    public WebElement clickTitle;
+
+    @FindBy (xpath="//body[@contenteditable='true']")
+    public WebElement MessageBox1;
+
+    @FindBy (xpath = "//span[.='To all employees']")
+    public WebElement ToAllEmployees;
+
+    @FindBy (xpath = "//span[@class='feed-add-post-del-but']")
+    public WebElement AllEmployeeDeleteBut;
+
+    @FindBy (xpath = "//span[.='Please specify at least one person.']")
+    public WebElement ErrorMsgForNoRecipient;
+
+    @FindBy(xpath = "//span[.='The message title is not specified']")
+    public WebElement ErrorMsgForNoMsg;
+
+    @FindBy(xpath="//span[@id='feed-post-more-3419']")
+    public WebElement MoreButtonForMsg;
+
+    @FindBy(xpath="//span[.='Delete']")
+    public WebElement DeleteButtonForMsg;
+
+
+
+
+
+
+
+
 
 
 

@@ -11,8 +11,8 @@ Feature: Functions on the Company Structure under Employee Menu
   @passed
   Scenario Outline: All user types display company structure
     When user logs in as "<userType>"
-    And user clicks on Employees menu
-    Then user should see "Company Structure" displayed
+    And user clicks on "Employees" menu
+    Then user sees "Company Structure" displayed
     Examples:
       | userType  |
       | hr        |
@@ -21,19 +21,18 @@ Feature: Functions on the Company Structure under Employee Menu
 
   @passed
   Scenario: HR user should be able to add a department from the company structure
-    When user logs in as "Hr" user
-    And "hr" is on the landing page
-    And user clicks on Employees menu
+    When user logs in as "Hr"
+    And user clicks on "Employees" menu
     Then hr user should be able to add department
 
-  @haveQuestions
+  @passed
   Scenario: Helpdesk user does not have "add department" option from the company structure
-    When user logs in as "Helpdesk" user
-    And user clicks on Employees menu
+    When user logs in as "Helpdesk"
+    And user clicks on "Employees" menu
     Then user should not see Add Department option
 
-  @haveQuestions
+  @passed
   Scenario: Marketing user does not have "add department" option from the company structure
-    When user logs in as "Marketing" user
-    And user clicks on Employees menu
+    When user logs in as "Marketing"
+    And user clicks on "Employees" menu
     Then user should not see Add Department option

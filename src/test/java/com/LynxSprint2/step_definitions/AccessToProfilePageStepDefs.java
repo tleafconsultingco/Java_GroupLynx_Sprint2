@@ -2,9 +2,14 @@ package com.LynxSprint2.step_definitions;
 
 import com.LynxSprint2.pages.AccessToProfilePage;
 import io.cucumber.java.en.And;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
 import org.junit.Assert;
+
+
+import java.util.List;
 
 public class AccessToProfilePageStepDefs {
 
@@ -18,11 +23,12 @@ public class AccessToProfilePageStepDefs {
     public void userClickOnProfile() {
         accessToProfilePage.myProfile.click();
     }
-    @When("user should see general button")
-    public void userShouldSeeGeneralButton() {
+
+    @Then("user should see options button General,Drive,Tasks,Calendar,Conversations")
+    public void userShouldSeeOptionsButtonGeneralDriveTasksCalendarConversations() {
         Assert.assertTrue(accessToProfilePage.generalButton.isDisplayed());
-       Assert.assertTrue(accessToProfilePage.driverButton.isDisplayed());
-       Assert.assertTrue(accessToProfilePage.tasksButton.isDisplayed());
+        Assert.assertTrue(accessToProfilePage.driverButton.isDisplayed());
+        Assert.assertTrue(accessToProfilePage.tasksButton.isDisplayed());
         Assert.assertTrue(accessToProfilePage.calendarButton.isDisplayed());
         Assert.assertTrue(accessToProfilePage.conversationsButton.isDisplayed());
     }
