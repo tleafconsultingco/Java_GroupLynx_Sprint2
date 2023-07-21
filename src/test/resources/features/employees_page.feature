@@ -15,7 +15,7 @@ Feature: Accessing Employees Page
       | userType  |
       | hr        |
       | helpdesk  |
-      #| marketing |
+      #| marketing | cannot see the company structure
 
 
 
