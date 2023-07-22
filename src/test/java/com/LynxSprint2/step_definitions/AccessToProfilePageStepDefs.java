@@ -1,6 +1,7 @@
 package com.LynxSprint2.step_definitions;
 
 import com.LynxSprint2.pages.AccessToProfilePage;
+import com.LynxSprint2.utilities.Driver;
 import io.cucumber.java.en.And;
 
 import io.cucumber.java.en.Then;
@@ -10,6 +11,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
 
+import java.time.Duration;
 import java.util.List;
 
 public class AccessToProfilePageStepDefs {
@@ -37,4 +39,9 @@ public class AccessToProfilePageStepDefs {
 
     }
 
+    @Then("user sees the email address under the General tab")
+    public void userSeesTheEmailAddressUnderTheGeneralTab() {
+        Assert.assertTrue( accessToProfilePage.pageTitle.isDisplayed());
+
+    }
 }
