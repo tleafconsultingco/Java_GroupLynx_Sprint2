@@ -1,3 +1,4 @@
+@nilay
 Feature: Send Message Functionality
 
   User Story:As a user, I should be able to send messages by clicking on Message tab under Active Stream.
@@ -14,7 +15,7 @@ Feature: Send Message Functionality
 
   Background: User is already in the log in page
     Given the user is on the login page
-@nilay
+
   Scenario Outline: Send message validation
     Given user logs in as "<userType>"
     When user clicks "Message" tab
