@@ -22,7 +22,7 @@ public class AccessToProfilePage {
     public WebElement myProfile;
 
     @FindBy(xpath="//span[@id=\"pagetitle\"]")
-    public WebElement pgeTitle;
+    public WebElement pageTitle;
 
 /*
     @FindBy(xpath="//a[.=\"General\"]")
@@ -40,7 +40,6 @@ public class AccessToProfilePage {
     @FindBy(xpath="//a[.=\"Conversations\t\t\t\t\t\t\"]")
     public WebElement conversationsButton;
 */
-
 
    @FindBy(xpath="//div[@id=\"profile-menu-filter\"]//a")
     public List<WebElement> elements;
